@@ -4,7 +4,8 @@
 #include <sys/mman.h>
 #include <vector>
 #include <iostream>
-#include "experiments.h"
+
+#include "my_vector.h"
 
 using namespace std;
 
@@ -46,6 +47,7 @@ int old_main() {
         vec.emplace_back(i + 1);
     }
     cout << "copies " << copies << " moves " << moves << "\n";
+    return 0;
 }
 
 const int PAGE_SIZE = 4096;
@@ -75,3 +77,6 @@ int experiment() {
     return 0;
 }
 
+void nop() {
+    MyVector<Int> vec;
+}
