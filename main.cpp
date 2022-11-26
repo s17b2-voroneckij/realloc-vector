@@ -24,8 +24,6 @@ int main() {
         for (size_t i = 0; i < initial_size; i++) {
             my_vec.emplace_back(i);
         }
-        my_vec.push_back(Int(1));
-        my_vec.pop();
     }
     printf("copied: %d, moved: %d, left: %d\n", Int::copies, Int::moves, Int::constructed);
 }
